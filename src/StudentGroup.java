@@ -167,12 +167,13 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
+		int k = 0;
 		for(int i=0;i<students.length;i++) {
 			if(students[i]==student) {
-				student=students[i+1];
+				k=i;
 				break;
 			}
 		}
-		return student;
+		return students[k+1];
 	}
 }
