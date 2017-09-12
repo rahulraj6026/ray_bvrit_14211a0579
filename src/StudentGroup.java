@@ -60,7 +60,13 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
-			
+		int k = students.length;
+		Student[] s1 = new Student[k+1];
+		s1[0]=student;
+		for(int i=1;i<k;i++)
+			s1[i]=students[i];
+		students=s1;
+		
 	}
 
 	@Override
@@ -77,28 +83,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
-		if(student==null)
-			throw new IllegalArgumentException();
-		else {
-			int k = students.length;
-			Student s1[] = new Student[k+1];
-			s1[0]= student;
-			for(int i=1;i<s1.length;i++)
-				s1[i]=students[i];
-			students=s1;
-		}
 	}
 
 	@Override
 	public void remove(int index) {
 		// Add your implementation here
-		for(int i=0;i<students.length;i++) {
-			if(i==index) {
-				while(i+1<students.length && i<students.length) {
-					students[i]=students[i+1];
-				}
-			}
-		}
 	}
 
 	@Override
@@ -158,7 +147,6 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsByAge(int age) {
 		// Add your implementation here
-		
 		return null;
 	}
 
