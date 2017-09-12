@@ -60,12 +60,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
-			int k = students.length;
-			Student s1[] = new Student[k+1];
-			s1[0]= student;
-			for(int i=1;i<s1.length;i++)
-				s1[i]=students[i];
-			students=s1;
+			
 	}
 
 	@Override
@@ -82,6 +77,12 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		int k = students.length;
+		Student s1[] = new Student[k+1];
+		s1[0]= student;
+		for(int i=1;i<s1.length;i++)
+			s1[i]=students[i];
+		students=s1;
 	}
 
 	@Override
