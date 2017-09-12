@@ -147,18 +147,24 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudentsByAge(int age) {
 		// Add your implementation here
+		
 		return null;
 	}
 
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
+		
 		return null;
 	}
 
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
-		return null;
+		for(int i=0;i<students.length;i++) {
+			if(students[i]==student)
+				student=students[i+1];
+		}
+		return student;
 	}
 }
