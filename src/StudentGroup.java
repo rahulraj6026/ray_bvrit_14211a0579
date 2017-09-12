@@ -83,6 +83,12 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		int k = students.length;
+		for(int i=0;i<k;i++) {
+			if(i==index) {
+				students[i]=student;
+			}
+		}
 	}
 
 	@Override
@@ -162,8 +168,10 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
 		for(int i=0;i<students.length;i++) {
-			if(students[i]==student)
+			if(students[i]==student) {
 				student=students[i+1];
+				break;
+			}
 		}
 		return student;
 	}
