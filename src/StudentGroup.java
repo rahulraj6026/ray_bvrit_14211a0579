@@ -26,7 +26,6 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
-		
 		return students;
 	}
 
@@ -45,19 +44,16 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
-		Students[i] = this.students;
 	}
 
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
-		students[0] = this.students;
 	}
 
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
-		students[length-1] = this.students;
 	}
 
 	@Override
