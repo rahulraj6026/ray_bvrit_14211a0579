@@ -94,6 +94,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void remove(int index) {
 		// Add your implementation here
+		
 	}
 
 	@Override
@@ -119,6 +120,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeToElement(Student student) {
 		// Add your implementation here
+		
 	}
 
 	@Override
@@ -167,11 +169,16 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
+
 		int k = 0;
-		for(int i=0;i<students.length;i++) {
-			if(students[i]==student) {
-				k=i;
-				break;
+		if(student==null)
+			throw new IllegalArgumentException();
+		else {
+			for(int i=0;i<students.length;i++) {
+				if(students[i]==student) {
+					k=i;
+					break;
+				}
 			}
 		}
 		return students[k+1];
